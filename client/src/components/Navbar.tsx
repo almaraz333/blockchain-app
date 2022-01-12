@@ -14,12 +14,12 @@ export const Navbar = () => {
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        {['Market', 'Exchange', 'Tuts', 'Wallets'].map((item, key) => (
+        {['Market', 'Exchange', 'Wallets'].map((item, key) => (
           <NavbarItem title={item} key={item + key} />
         ))}
-        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+        {/* <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
           Login
-        </li>
+        </li> */}
       </ul>
       <div className="flex relative">
         {isMenuOpen ? (
@@ -40,7 +40,7 @@ export const Navbar = () => {
             <li className="text-xl w-full my-2 cursor-pointer">
               <AiOutlineClose onClick={() => setIsMenuOpen(false)} />
             </li>
-            {['Market', 'Exchange', 'Tuts', 'Wallets'].map((item, key) => (
+            {['Market', 'Exchange', 'Wallets'].map((item, key) => (
               <NavbarItem
                 title={item}
                 key={item + key}
