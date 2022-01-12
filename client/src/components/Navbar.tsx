@@ -25,7 +25,7 @@ export const Navbar = () => {
         {isMenuOpen ? (
           <AiOutlineClose
             fontSize={28}
-            className="text-white md:hidden cursor-pointer"
+            className="text-white md:hidden cursor-pointer z-20"
             onClick={() => setIsMenuOpen(false)}
           />
         ) : (
@@ -36,10 +36,10 @@ export const Navbar = () => {
           />
         )}
         {isMenuOpen && (
-          <ul className="z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in">
-            <li className="text-xl w-full my-2 cursor-pointer">
+          <ul className="z-10 fixed top-0 -right-2 p-3 pt-10 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in">
+            {/* <li className="text-xl w-full my-2 cursor-pointer">
               <AiOutlineClose onClick={() => setIsMenuOpen(false)} />
-            </li>
+            </li> */}
             {['Market', 'Exchange', 'Wallets'].map((item, key) => (
               <NavbarItem
                 title={item}
