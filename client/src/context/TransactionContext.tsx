@@ -198,7 +198,7 @@ export const TransactionProvider: React.FC = ({ children }) => {
 
     checkIfWalletConnected();
     checkIfTransactionsExits();
-  }, []);
+  }, [currentAccount]);
 
   return (
     <TransactionContext.Provider

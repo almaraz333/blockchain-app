@@ -4,7 +4,7 @@ import { TransactionContext } from '../context/TransactionContext';
 import { Input } from './Input';
 
 export const WelcomeForm = () => {
-  const { formData, handleChange, sendTransaction, isLoading } =
+  const { formData, handleChange, sendTransaction, isLoading, currentAccount } =
     useContext(TransactionContext);
 
   const handleSubmit = () => {
@@ -55,7 +55,8 @@ export const WelcomeForm = () => {
         <button
           type="submit"
           onClick={(e) => handleSubmit()}
-          className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
+          className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer disabled:bg-gray-500 disabled:border-none disabled:cursor-default"
+          disabled={!currentAccount}
         >
           Send Now
         </button>
